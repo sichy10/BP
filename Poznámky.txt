@@ -1,0 +1,9 @@
+- každou minutu		-nahrát hodnoty senzorů
+			-uložit na sd kartu
+			-updatovat display
+
+
+- pořád			-komunikovat s bluetůt
+			-reguvolat a ovladat podle nastavení
+			-upravovat prváě běžící program na základěě hodnot ze senzorů
+			-ovaldat regulaci
