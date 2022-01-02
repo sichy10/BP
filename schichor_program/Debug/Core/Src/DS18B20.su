@@ -1,0 +1,7 @@
+DS18B20.c:9:6:delay	16	static
+DS18B20.c:16:6:Set_Pin_Output	40	static
+DS18B20.c:25:6:Set_Pin_Input	40	static
+DS18B20.c:34:9:DS18B20_Start	24	static
+DS18B20.c:52:6:DS18B20_Write	24	static
+DS18B20.c:84:9:DS18B20_Read	24	static
+DS18B20.c:107:9:DS18B20_Measurement	16	static
