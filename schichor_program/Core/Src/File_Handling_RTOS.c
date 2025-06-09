@@ -214,8 +214,9 @@ FRESULT Read_File (char *name)
 		/* Read data from the file
 		* see the function details for the arguments */
 
-		char *buffer = pvPortMalloc(sizeof(f_size(&fil)));
-		fresult = f_read (&fil, buffer, f_size(&fil), &br);
+               char *buffer = pvPortMalloc(f_size(&fil) + 1);
+               fresult = f_read (&fil, buffer, f_size(&fil), &br);
+               buffer[f_size(&fil)] = '\0';
 		if (fresult != FR_OK)
 		{
 			char *buf = pvPortMalloc(100*sizeof(char));
