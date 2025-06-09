@@ -214,16 +214,16 @@ FRESULT Read_File (char *name)
 		/* Read data from the file
 		* see the function details for the arguments */
 
-		char *buffer = pvPortMalloc(sizeof(f_size(&fil)));
-		fresult = f_read (&fil, buffer, f_size(&fil), &br);
-		if (fresult != FR_OK)
-		{
-			char *buf = pvPortMalloc(100*sizeof(char));
-			vPortFree(buffer);
-		 	sprintf (buf, "ERROR!!! No. %d in reading file *%s*\n\n", fresult, name);
-		  	Send_Uart(buffer);
-		  	vPortFree(buf);
-		}
+                char *buffer = pvPortMalloc(sizeof(f_size(&fil)));
+                fresult = f_read (&fil, buffer, f_size(&fil), &br);
+                if (fresult != FR_OK)
+                {
+                        char *buf = pvPortMalloc(100*sizeof(char));
+                        vPortFree(buffer);
+                        sprintf (buf, "ERROR!!! No. %d in reading file *%s*\n\n", fresult, name);
+                        Send_Uart(buf);
+                        vPortFree(buf);
+                }
 
 		else
 		{
